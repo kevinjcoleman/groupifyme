@@ -21,7 +21,125 @@
 @import "bootstrap";
 
 // Bootstrap body padding for fixed navbar
-body { padding-top: 60px; }
+body { 
+			padding-top: 60px;
+			font-family: 'Raleway', sans-serif;
+ }
 
 // And finally bootswatch style itself
 @import "bootswatch/flatly/bootswatch";
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500italic);
+// Variables
+
+$groupify-blue: #209BDA;
+$groupify-white: #FFFFFF;
+$groupify-orange: #FFA433;
+$groupify-grey: #6b6b6b;
+
+// Global Styles
+.center-text {
+	text-align: center;
+}
+.text-white {
+	color: $groupify-white;
+}
+// Fixed Nav style
+.navbar-inverse {
+	background-color: $groupify-white;
+	border-bottom: 1px solid black;
+	.navbar-brand {
+		color: $groupify-blue;
+	}
+	.navbar-toggle {
+		border-color: transparent;
+		.icon-bar {
+			background-color: $groupify-orange;
+		}
+	}
+}
+@media (max-width: 2000px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+// Homepage styles
+
+.page-hero-container {
+	min-height: 600px;
+	background-color: grey;
+	padding: 20% 0 0 0;
+}
+
+.home-page-hero-text {
+	color: white;
+}
+
+.what-we-do {
+	background-color: $groupify-blue;
+}
+
+.what-we-do-items {
+	padding-top: 20px;
+}
+
+.section {
+	min-height: 400px;
+}
+
+.coverage-map {
+	background-color: $groupify-blue;
+}
+
+// Footer styles
+
+.footer {
+	min-height: 200px;
+	background-color: black;
+	padding-top: 100px;
+	.footer-menu {
+		ul {
+			list-style-type: none;
+			li {
+				display: inline-block;
+			}
+		}
+	}
+	a {
+		color: $groupify-grey;
+	}
+	p {
+		color: $groupify-white;
+	}
+}
