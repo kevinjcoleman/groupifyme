@@ -26,6 +26,10 @@ body {
 			font-family: 'Raleway', sans-serif;
  }
 
+ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+ 	font-family: 'Raleway', sans-serif;
+ }
+
 // And finally bootswatch style itself
 @import "bootswatch/flatly/bootswatch";
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500italic);
@@ -50,11 +54,17 @@ $groupify-grey: #6b6b6b;
 	.navbar-brand {
 		color: $groupify-blue;
 	}
+	.navbar-collapse {
+		border-color: $groupify-orange;
+	}
 	.navbar-toggle {
 		border-color: transparent;
 		.icon-bar {
 			background-color: $groupify-orange;
 		}
+	}
+	.navbar-nav > li > a {
+		color: $groupify-blue;
 	}
 }
 @media (max-width: 2000px) {
@@ -108,6 +118,10 @@ $groupify-grey: #6b6b6b;
 
 .what-we-do {
 	background-color: $groupify-blue;
+	h1 {
+		font-weight: bolder;
+    text-transform: uppercase;
+	}
 }
 
 .what-we-do-items {
@@ -120,6 +134,15 @@ $groupify-grey: #6b6b6b;
 
 .coverage-map {
 	background-color: $groupify-blue;
+}
+
+#map {
+	width: 100%;
+	padding-top: 25px;
+  padding-bottom: 40px;
+	img {
+		margin: auto;
+	}
 }
 
 // Footer styles
