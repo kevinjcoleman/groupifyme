@@ -22,8 +22,11 @@
 
 // Bootstrap body padding for fixed navbar
 body { 
-			padding-top: 60px;
-			font-family: 'Raleway', sans-serif;
+	padding-top: 60px;
+	font-family: 'Raleway', sans-serif;
+	p {
+		font-size: 1.4em;
+	}
  }
 
  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -47,6 +50,18 @@ $groupify-grey: #6b6b6b;
 .text-white {
 	color: $groupify-white;
 }
+a {
+		color: $groupify-blue;
+		-webkit-transition : color 200ms ease-out;
+  	-moz-transition : color 200ms ease-out;
+  	-o-transition : color 200ms ease-out;
+  	transition : color 200ms ease-out;
+  	&:hover {
+  		color: black;
+  		text-decoration: none
+  	}
+}
+
 // Fixed Nav style
 .navbar-inverse {
 	background-color: $groupify-white;
@@ -57,10 +72,31 @@ $groupify-grey: #6b6b6b;
 	.navbar-collapse {
 		border-color: $groupify-orange;
 	}
+	.navbar-nav {
+		li {
+			font-size: 24px;
+		}
+	}
 	.navbar-toggle {
 		border-color: transparent;
+		margin-top: 15px;
+		-webkit-transition : border 500ms ease-out;
+  	-moz-transition : border 500ms ease-out;
+  	-o-transition : border 500ms ease-out;
+  	transition : border 500ms ease-out;
 		.icon-bar {
 			background-color: $groupify-orange;
+			    display: block;
+    width: 50px;
+    height: 4px;
+    border-radius: 29px;
+		}
+		.icon-bar + .icon-bar {
+    margin-top: 7px;
+		}
+		&:hover, &:focus {
+			background-color: transparent;
+			border: black solid 1px;
 		}
 	}
 	.navbar-nav > li > a {
@@ -73,6 +109,8 @@ $groupify-grey: #6b6b6b;
     width: 175px;
     margin-left: 4%;
 }
+
+
 @media (max-width: 2000px) {
     .navbar-header {
         float: none;
@@ -114,14 +152,34 @@ $groupify-grey: #6b6b6b;
 
 .page-hero-container {
 	min-height: 450px;
-	padding: 20% 0 0 0;
+	padding: 175px 0 0 0;
   background-position: center;
   background-size: cover;
-  background-image: url(https://s3-us-west-2.amazonaws.com/groupify.me/images/Homepage+Hero+Spot.jpg);
+  border-bottom: 15px solid $groupify-blue;
+}
+
+.home {
+	background-image: url(https://s3-us-west-2.amazonaws.com/groupify.me/images/Homepage+Hero+Spot.jpg);
+}
+
+.about {
+	background-image: url(https://s3-us-west-2.amazonaws.com/groupify.me/images/About+Us+Photo.jpg);
+	background-position: 0 38%;
+}
+
+.contact {
+	background-color: grey;
+	// background-image: url(https://s3-us-west-2.amazonaws.com/groupify.me/images/Homepage+Hero+Spot.jpg);
 }
 
 .home-page-hero-text {
-	color: white;
+	color: $groupify-orange;
+  text-shadow: 1.5px 1.5px #163445;
+  h1 {
+  	font-size: 3.5em;
+  	font-weight: 700;
+  }
+  margin-top: 3%;
 }
 
 .what-we-do {
@@ -153,6 +211,53 @@ $groupify-grey: #6b6b6b;
 	}
 }
 
+//Contact us styles
+
+.contact-us {
+	padding-top: 3em;
+	hr {
+		border-top: 1px solid $groupify-blue;
+		margin: 3em 5em;
+	}
+
+}
+
+#office-img {
+	img { 
+		margin: auto;
+		padding-bottom: 20px;
+	}
+}
+
+.address-box {
+		margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+// About us styles
+.pitch {
+	hr {
+		    border: 0;
+    margin: 21px 247px;
+    border-top: 2px solid #2B9CD7;
+	}
+}
+.team {
+	margin-top: 20px;
+	padding-top: 1em;
+	background-color: $groupify-blue;
+	color: white;
+}
+.team-pic { 
+		img { 
+    width: 125px;
+    margin: 0 auto;
+    display: block;
+  }
+  h3 {
+  	text-align: center;
+  }
+ }
 // Footer styles
 
 .footer {
