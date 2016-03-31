@@ -67,6 +67,12 @@ $groupify-grey: #6b6b6b;
 		color: $groupify-blue;
 	}
 }
+.nav-logo {
+	    margin-top: -10px;
+    padding-bottom: 5px;
+    width: 175px;
+    margin-left: 4%;
+}
 @media (max-width: 2000px) {
     .navbar-header {
         float: none;
@@ -107,9 +113,11 @@ $groupify-grey: #6b6b6b;
 // Homepage styles
 
 .page-hero-container {
-	min-height: 600px;
-	background-color: grey;
+	min-height: 450px;
 	padding: 20% 0 0 0;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://s3-us-west-2.amazonaws.com/groupify.me/images/Homepage+Hero+Spot.jpg);
 }
 
 .home-page-hero-text {
