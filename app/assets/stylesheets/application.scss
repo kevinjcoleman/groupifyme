@@ -66,6 +66,9 @@ a {
 .navbar-inverse {
 	background-color: $groupify-white;
 	border-bottom: 1px solid black;
+	.container {
+		width: 100%;
+	}
 	.navbar-brand {
 		color: $groupify-blue;
 	}
@@ -160,6 +163,7 @@ a {
 
 .home {
 	background-image: url(https://s3-us-west-2.amazonaws.com/groupify.me/images/Homepage+Hero+Spot.jpg);
+	border-bottom: 0px solid #209BDA;
 }
 
 .about {
@@ -168,8 +172,7 @@ a {
 }
 
 .contact {
-	background-color: grey;
-	// background-image: url(https://s3-us-west-2.amazonaws.com/groupify.me/images/Homepage+Hero+Spot.jpg);
+	background-image: url(https://s3-us-west-2.amazonaws.com/groupify.me/images/Contact+Us+Photo+1.png);
 }
 
 .home-page-hero-text {
@@ -183,6 +186,8 @@ a {
 }
 
 .what-we-do {
+	padding-top: 1.5em;
+	margin-top: 25px;
 	background-color: $groupify-blue;
 	h1 {
 		font-weight: bolder;
@@ -192,6 +197,26 @@ a {
 
 .what-we-do-items {
 	padding-top: 20px;
+	    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.what-we-do-box {
+	position: relative;
+  padding: 80px 14px 30px 14px;
+  margin-top: 65px;
+  margin-bottom: 15px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+}
+
+.logo {
+	position: absolute;
+    top: -55px;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .section {
@@ -236,6 +261,11 @@ a {
 
 // About us styles
 .pitch {
+	max-width: 800px;
+	padding-top: 2em;
+	h3, p {
+		line-height: 1.6em;
+	}
 	hr {
 		    border: 0;
     margin: 21px 247px;
@@ -249,11 +279,17 @@ a {
 	color: white;
 }
 .team-pic { 
+		overflow: hidden;
+		transition: all .2s ease-in-out; 
 		img { 
     width: 125px;
     margin: 0 auto;
     display: block;
-  }
+    }
+		&:hover {
+    transform: scale(1.1); 
+    color: $groupify-orange;
+	}
   h3 {
   	text-align: center;
   }
@@ -268,12 +304,18 @@ a {
 		ul {
 			list-style-type: none;
 			li {
+				margin-right: 1px;
+   			margin-left: 1px;
 				display: inline-block;
 			}
 		}
 	}
 	a {
+		font-size: 18px;
 		color: $groupify-grey;
+		&:hover {
+			color: #3f3f3f;
+		}
 	}
 	p {
 		color: $groupify-white;
