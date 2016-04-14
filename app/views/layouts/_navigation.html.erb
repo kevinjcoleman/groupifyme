@@ -14,7 +14,10 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <%= render 'layouts/navigation_links' %>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'About', pages_about_path %></li>
+        <li><%= link_to 'Contact', pages_contact_path %></li>
+        <li><a href="http://www.studentideals.com">Student IDeals</a></li>
       </ul>
     </div>
   </div>

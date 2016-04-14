@@ -24,6 +24,8 @@
 body { 
 	padding-top: 60px;
 	font-family: 'Raleway', sans-serif;
+	overflow-x: hidden;
+	width: auto;
 	p {
 		font-size: 1.4em;
 	}
@@ -60,6 +62,11 @@ a {
   		color: black;
   		text-decoration: none
   	}
+}
+
+hr {
+	margin: 3% 12%;
+	border-top: 2px solid #2B9CD7;
 }
 
 // Fixed Nav style
@@ -110,11 +117,11 @@ a {
 	    margin-top: -10px;
     padding-bottom: 5px;
     width: 175px;
-    margin-left: 4%;
+    margin-left: -3%;
 }
 
 
-@media (max-width: 2000px) {
+@media (max-width: 2500px) {
     .navbar-header {
         float: none;
     }
@@ -211,6 +218,11 @@ a {
   font-size: 20px;
 }
 
+.subtitle {
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
 .logo {
 	position: absolute;
     top: -55px;
@@ -223,15 +235,34 @@ a {
 	min-height: 400px;
 }
 
+.subsection {
+	padding-top: 1.25em;
+}
+
+.app-preview {
+	img {
+		max-width: 250px;
+		width: 100
+	}
+}
+
+.now-presenting, .app-preview {
+	margin: auto;
+}
+
 .coverage-map {
 	background-color: $groupify-blue;
 }
+
+
 
 #map {
 	width: 100%;
 	padding-top: 25px;
   padding-bottom: 40px;
 	img {
+		max-width: 650px;
+		width: 100%;
 		margin: auto;
 	}
 }
@@ -241,7 +272,7 @@ a {
 .contact-us {
 	padding-top: 3em;
 	hr {
-		border-top: 1px solid $groupify-blue;
+		border-top: 2px solid $groupify-blue;
 		margin: 3em 5em;
 	}
 
@@ -256,20 +287,18 @@ a {
 
 .address-box {
 		margin-top: -10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 // About us styles
 .pitch {
-	max-width: 800px;
+	max-width: 900px;
 	padding-top: 2em;
 	h3, p {
 		line-height: 1.6em;
 	}
 	hr {
-		    border: 0;
-    margin: 21px 247px;
-    border-top: 2px solid #2B9CD7;
+		margin: 3% 10%;
 	}
 }
 .team {
@@ -277,10 +306,20 @@ a {
 	padding-top: 1em;
 	background-color: $groupify-blue;
 	color: white;
+	h2 {
+		padding-bottom: .5em;
+	}
+	hr {
+		border: 0;
+    border-top: 2px solid #fff;
+	}
 }
 .team-pic { 
 		overflow: hidden;
 		transition: all .2s ease-in-out; 
+		a {
+			color: white;
+		}
 		img { 
     width: 125px;
     margin: 0 auto;
@@ -288,8 +327,8 @@ a {
     }
 		&:hover {
     transform: scale(1.1); 
-    color: $groupify-orange;
-	}
+    a { color: $groupify-orange; }  
+		}
   h3 {
   	text-align: center;
   }
@@ -302,6 +341,7 @@ a {
 	padding-top: 100px;
 	.footer-menu {
 		ul {
+			padding-left: 0;
 			list-style-type: none;
 			li {
 				margin-right: 1px;
@@ -320,4 +360,17 @@ a {
 	p {
 		color: $groupify-white;
 	}
+}
+
+
+@media (max-width: 960px) {
+	.footer {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		min-height: 100px;
+	}
+}
+
+@media (max-width: 600px) {
+
 }
