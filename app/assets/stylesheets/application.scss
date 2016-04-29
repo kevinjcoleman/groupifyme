@@ -33,11 +33,12 @@ body {
 
  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
  	font-family: 'Raleway', sans-serif;
+  font-weight: 500;
  }
 
 // And finally bootswatch style itself
 @import "bootswatch/flatly/bootswatch";
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500italic);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
 // Variables
 
 $groupify-blue: #209BDA;
@@ -64,6 +65,9 @@ a {
   	}
 }
 
+.container {
+  width: 100%;
+}
 hr {
 	margin: 3% 12%;
 	border-top: 2px solid #2B9CD7;
@@ -162,14 +166,14 @@ hr {
 
 .page-hero-container {
 	min-height: 450px;
-	padding: 175px 0 0 0;
+	padding: 160px 25px 0 25px;
   background-position: center;
   background-size: cover;
   border-bottom: 15px solid $groupify-blue;
 }
 
 .home {
-	background-image: url(https://s3-us-west-2.amazonaws.com/groupify.me/images/Homepage+Hero+Spot.jpg);
+	background-image: url(https://s3-us-west-2.amazonaws.com/groupify.me/images/Homepage+Hero+Spot+2.jpg);
 	border-bottom: 0px solid #209BDA;
 }
 
@@ -183,8 +187,8 @@ hr {
 }
 
 .home-page-hero-text {
-	color: $groupify-orange;
-  text-shadow: 1.5px 1.5px #163445;
+    color: $groupify-orange;
+    text-shadow: 1.5px 1.5px black;
   h1 {
   	font-size: 3.5em;
   	font-weight: 700;
@@ -219,7 +223,6 @@ hr {
 }
 
 .subtitle {
-	font-weight: bolder;
 	text-transform: uppercase;
 }
 
@@ -239,16 +242,27 @@ hr {
 	padding-top: 1.25em;
 }
 
+.sid-homepage {
+  margin: 2em 7em;
+} 
+
 .app-preview {
-	img {
-		max-width: 250px;
-		width: 100
-	}
+  img {
+    max-width: 250px;
+    width: 100%
+  }
+}
+.now-presenting, .app-preview {
+  img {
+    margin: auto;
+  }
+}  
+
+.now-presenting {
+  padding-top: 6em;
+  padding-bottom: 1em; 
 }
 
-.now-presenting, .app-preview {
-	margin: auto;
-}
 
 .coverage-map {
 	background-color: $groupify-blue;
@@ -306,13 +320,16 @@ hr {
 	padding-top: 1em;
 	background-color: $groupify-blue;
 	color: white;
-	h2 {
+	h1 {
 		padding-bottom: .5em;
 	}
 	hr {
 		border: 0;
     border-top: 2px solid #fff;
 	}
+  .thank-you {
+    padding: 2em 4em 0em 4em;
+  }
 }
 .team-pic { 
 		overflow: hidden;
@@ -341,7 +358,7 @@ hr {
 	padding-top: 100px;
 	.footer-menu {
 		ul {
-			padding-left: 0;
+			padding-left: 10px;
 			list-style-type: none;
 			li {
 				margin-right: 1px;
@@ -349,7 +366,13 @@ hr {
 				display: inline-block;
 			}
 		}
+    font-size: 0.8em;
 	}
+  .footer-incorporated {
+    p {
+      font-size: 1.2em;
+    }
+  }
 	a {
 		font-size: 18px;
 		color: $groupify-grey;
@@ -362,6 +385,16 @@ hr {
 	}
 }
 
+// Privacy Policy page
+
+.privacy-policy {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  h1, h2, h3 {
+    padding-top: .75em;
+  }
+}
+
 
 @media (max-width: 960px) {
 	.footer {
@@ -369,8 +402,25 @@ hr {
 		padding-bottom: 50px;
 		min-height: 100px;
 	}
+  .now-presenting {
+    padding-top: 0;
+  }
+  .sid-homepage {
+    margin: 2em 2em;
+  } 
+  .page-hero-container {
+    padding: 15% 15px 0 15px;
+  }
+  .contact.page-hero-container {
+      padding: 160px 25px 0 25px;
+  } 
 }
 
 @media (max-width: 600px) {
-
+  .page-hero-container {
+    padding: 8% 5px 0 5px;
+  }
+  .contact.page-hero-container {
+      padding: 160px 25px 0 25px;
+  } 
 }

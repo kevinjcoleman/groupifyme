@@ -9,4 +9,8 @@ class PagesController < ApplicationController
   def contact
   	@title = "Contact us"
   end
+
+  def privacy_policy
+    @title = "Privacy policy"
+  end
 end
